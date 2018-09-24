@@ -1,6 +1,7 @@
 import quandl
 import tweepy
 import pandas as pd
+import numpy as np
 
 def Extract_Close_Yahoo(file_location): #extracts close price from yahoo csv file location
   df = pd.read_csv(Extract_Close_Yahoo)
@@ -29,6 +30,18 @@ def max_drawdown(df_price)
   #inputs: price / nav / equity dataframe
   #outputs: max_drawdown in decimals
   returns = df_price.pct_change
+  #to be updated
+  return max_drawdown
+  
+
+def daily_seasonality(df_price):
+  #inputs: price, nav, equity dataframe
+  #outputs: average returns sorted by day dataframe
+  df_price = df_price.set_index("Date")
+  df_price.weekday = df_price.DatetimeIndex.weekday #The day of the week with Monday=0, Sunday=6
+  
+  
+
   
   
   
