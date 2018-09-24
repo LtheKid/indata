@@ -1,0 +1,3 @@
+# indata
+indata is a python package file that helps with the preprocessing of difference csv data sources or dataframe formats.
+Just one of my own pet projects...
