@@ -1,0 +1,34 @@
+import quandl
+import tweepy
+import pandas as pd
+
+def Extract_Close_Yahoo(file_location): #extracts close price from yahoo csv file location
+  df = pd.read_csv(Extract_Close_Yahoo)
+  return df.Close
+
+def import_from_quandl(ID, ticker):
+  #Outputs a dataframe containing the Quandl downloaded data
+  df = quandl(ID, ticker)
+  return df
+  
+def import_from_twitter(ID, user):
+  #Outputs all recent twitter tweets posted by a twitter user as a string
+  return output
+  
+  
+def Sharpe(df_price):
+  #Inputs: Price / Nav / Equity Dataframe
+  #Outputs: Sharpe ratio
+  returns = df_price.pct_change
+  mean_returns = returns.mean
+  sd = returns.std
+  sharpe = mean_returns / sd
+  return sharpe
+
+def max_drawdown(df_price)
+  #inputs: price / nav / equity dataframe
+  #outputs: max_drawdown in decimals
+  returns = df_price.pct_change
+  
+  
+  
